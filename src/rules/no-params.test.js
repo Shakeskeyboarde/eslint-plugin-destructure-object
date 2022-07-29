@@ -40,13 +40,13 @@ const ts = new RuleTester({
       // Allow if the destructured parameter is the only parameter.
       {
         code: '({ key }, a) => {};',
-        errors: [{ message: /do not destructure/i }],
+        errors: [{ message: /do not destructure.*more than one parameter/i }],
         options: [{ allowOnlyParam: true }],
         name: 'allowOnlyParam',
       },
       {
         code: '(a, { key }) => {};',
-        errors: [{ message: /do not destructure/i }],
+        errors: [{ message: /do not destructure.*more than one parameter/i }],
         options: [{ allowOnlyParam: true }],
         name: 'allowOnlyParam',
       },

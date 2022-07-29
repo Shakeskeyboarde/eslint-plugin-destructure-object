@@ -23,7 +23,12 @@ module.exports = {
 
         if (functionParent.type.includes('Function')) {
           if (!allowOnlyParam || functionParent.params.length > 1) {
-            ctx.report(node, 'Do not destructure function parameters.');
+            ctx.report(
+              node,
+              `Do not destructure function parameters${
+                allowOnlyParam ? ' when more than one parameter is present' : ''
+              }.`,
+            );
           }
         }
       },
