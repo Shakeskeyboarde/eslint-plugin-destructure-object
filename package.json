@@ -3,13 +3,10 @@
   "description": "ESLint object destructuring rules.",
   "author": "Chris Ackerman <chris@topher.land>",
   "license": "ISC",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": [
-    "lib/**"
+    "src/**"
   ],
-  "directories": {
-    "lib": "lib"
-  },
   "main": "src/index.js",
   "sideEffects": false,
   "scripts": {
